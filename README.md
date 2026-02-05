@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Question</title>
+<style>
+  body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #ffe6eb;
+    padding-top: 100px;
+  }
+
+  h1 {
+    color: #ff3366;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+  }
+
+  #yesBtn {
+    background: #ff3366;
+    color: white;
+  }
+
+  #noBtn {
+    background: #333;
+    color: white;
+    position: absolute;
+  }
+
+  #result {
+    margin-top: 30px;
+    font-size: 22px;
+    color: #ff3366;
+  }
+
+  img {
+    margin-top: 20px;
+    width: 200px;
+    display: none;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Priti, will you be my Valentine? ❤️</h1>
+
+<button id="yesBtn">Yes</button>
+<button id="noBtn">No</button>
+
+<div id="result"></div>
+
+<img id="catGif" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const result = document.getElementById("result");
+const catGif = document.getElementById("catGif");
+
+noBtn.addEventListener("mouseover", () => {
+  const x = Math.random() * window.innerWidth * 0.8;
+  const y = Math.random() * window.innerHeight * 0.8;
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+});
+
+yesBtn.addEventListener("click", () => {
+  result.innerHTML = "Awww, I knew you love me 😘";
+  catGif.style.display = "block";
+});
+</script>
+
+</body>
+</html>
